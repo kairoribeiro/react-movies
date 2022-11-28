@@ -11,9 +11,30 @@ body {
   margin: 0;
 }
 
+header {
+  background-color: #373b69;
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-end;
+}
+
+.search {
+  border: 2px solid #22254b;
+  color: #22254b;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  padding: 0.3rem 1.5rem;
+}
+
+.search:focus {
+  outline: 0;
+}
+
 .movie-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .movie {
@@ -43,16 +64,39 @@ body {
 
 .movie-over {
   background-color: #fff;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   color: #22254b;
   padding: 1rem;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  transform: translateY(100%); /*push dow 100% */
+  overflow: auto;
+  max-height: 100%;
+  transform: translateY(102%); /*push dow 100% */
   transition: transform 0.3s ease-in-out;
 }
 
 .movie:hover .movie-over {
   transform: translateY(0%); /*go back*/
+}
+
+.tag {
+  background-color: #22254b;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.tag.green {
+  color: green;
+}
+
+.tag.orange {
+  color: orange;
+}
+
+.tag.red {
+  color: red;
 }
